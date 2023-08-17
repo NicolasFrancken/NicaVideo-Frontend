@@ -1,0 +1,65 @@
+.Creators-Container {
+  box-sizing: border-box;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 7rem 2rem 2rem 2rem;
+}
+
+.Creators-CreatorContainer{
+  width: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.Creators-Left{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.Creators-Image {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+}
+
+.Creators-Name {
+  margin: 0;
+  font-size: 1.3rem;
+  margin-left: 2rem;
+}
+
+.Creators-FollowButton{
+  box-sizing: border-box;
+  justify-self: center;
+  border-radius: 0.7rem;
+  border: 2px solid var(--dark-color);
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  width: 7rem;
+  height: 2.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: opacity 0.2s ease;
+}
+
+.Creators-FollowButton:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.Creators-Error{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 1rem 0 0 0;
+}

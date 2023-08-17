@@ -1,0 +1,76 @@
+.Video-Container {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Video-VideoContainer{
+  border-radius: 1rem;
+}
+
+.Video-Form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.Video-Input{
+  box-sizing: border-box;
+  background-color: var(--dark-color);
+  border: none;
+  width: 560px;
+  height: 2.5rem;
+  margin: 1.5rem 0 0 0;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  color: var(--light-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.Video-ErrorContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0 0 0;
+  width: 100%;
+}
+
+.Video-ErrorLabel{
+  font-size: 0.8rem;
+  color: #ce3c3c;
+}
+
+.Video-ButtonsContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.Video-Button{
+  box-sizing: border-box;
+  justify-self: center;
+  border-radius: 0.7rem;
+  border: 2px solid var(--dark-color);
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  width: 5rem;
+  height: 2rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  font-family: inherit;
+  margin: 0 0.5rem;
+  transition: opacity 0.2s ease;
+}
+
+.Video-Button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}

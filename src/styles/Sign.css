@@ -1,0 +1,93 @@
+.Sign-UpperContainer{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Sign-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #292929;
+  width: 17rem;
+  height: fit-content;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.Sign-Form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Sign-Input {
+  box-sizing: border-box;
+  background-color: #dfdfdf;
+  border: none;
+  width: 100%;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  color: #292929;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.Sign-Input:focus {
+  outline: none;
+}
+
+.Sign-Input::placeholder {
+  color: #292929c7;
+}
+
+.Sign-SubmitButton {
+  background-color: #dfdfdf;
+  border: none;
+  width: 100%;
+  height: 2.5rem;
+  margin-top: 1rem;
+  border-radius: 0.3rem;
+  padding: 0;
+  color: #292929;
+  transition: opacity 0.2s ease ;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.Sign-SubmitButton:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.Sign-Button {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  border-radius: 0.3rem;
+  padding: 0;
+  padding-top: 1rem;
+  color: #dfdfdf;
+  transition: opacity 0.2s ease;
+  font-family: inherit;
+}
+
+.Sign-Button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.Sign-Label{
+  font-size: 0.8rem;
+  color: #ce3c3c;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  font-family: inherit;
+}

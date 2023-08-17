@@ -1,0 +1,117 @@
+.Home-Container {
+  box-sizing: border-box;
+  width: 100vw;
+  padding: 7rem 1rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.Home-Top{
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.Home-Bottom{
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.Home-Title {
+  margin: 0;
+  align-self: center;
+  justify-self: center;
+  font-size: 2rem;
+}
+
+
+.Home-CreatorsButton{
+  box-sizing: border-box;
+  justify-self: center;
+  border-radius: 0.7rem;
+  border: 2px solid var(--dark-color);
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  width: 7rem;
+  height: 2.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: opacity 0.2s ease;
+}
+
+.Home-CreatorsButton:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.Home-VideoContainer {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 300px;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem
+}
+
+.Home-FrameContainer{
+  border-radius: 1rem;
+}
+
+.Home-VideoTitle {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.Home-VideoDate{
+  font-size: 0.8rem;
+}
+
+.Home-LikeButton {
+  box-sizing: border-box;
+  justify-self: center;
+  border-radius: 0.7rem;
+  border: 2px solid var(--dark-color);
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  width: 5rem;
+  height: 2rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: inherit;
+  margin: 0.5rem 0 0 0;
+  transition: opacity 0.2s ease;
+}
+
+.Home-LikeButton:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.Home-Error{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 1rem 0 0 0;
+}
+
+.Home-NoVideosContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.Home-NoVideosContainer p{
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 1rem 0 0 0;
+}

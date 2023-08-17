@@ -1,0 +1,25 @@
+:root {
+  --light-color:#dfdfdf;
+  --dark-color: #292929;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light-color);
+
+  margin: 0;
+  padding: 0;
+  color: var(--dark-color);
+}
+
+#root {
+  background-color: var(--light-color);
+
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark-color);
+}

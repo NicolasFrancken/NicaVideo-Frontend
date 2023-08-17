@@ -1,0 +1,130 @@
+.UploadModal-Button {
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 2rem;
+  border: 2px solid #292929;
+  border-radius: 1rem;
+  background-color: #dfdfdf;
+  color: #292929;
+  padding: 1rem 1.5rem;
+  z-index: 5;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: opacity 0.2s ease;
+}
+
+.UploadModal-Button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.UploadModal-GreyContainer{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+}
+
+.UploadModal-Container{
+  box-sizing: border-box;
+  width: 30rem;
+  height: fit-content;
+  border-radius: 1rem;
+  padding: 2rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #292929;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+}
+
+.UploadModal-CancelButton{
+  position: absolute;
+  top: -0.7rem;
+  right: -0.7rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--light-color);
+  border: 2px solid var(--dark-color);
+  border-radius: 50%;
+  font-size: 0.9rem ;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: opacity 0.2s ease;
+}
+
+.UploadModal-CancelButton:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.UploadModal-Form{
+  display: flex;
+  flex-direction: column;
+}
+
+.UploadModal-Input{
+  box-sizing: border-box;
+  background-color: #dfdfdf;
+  border: none;
+  width: 100%;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+  color: #292929;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.UploadModal-Input:focus {
+  outline: none;
+}
+
+.UploadModal-Input::placeholder {
+  color: #292929c7;
+}
+
+.UploadModal-ErrorContainer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.UploadModal-ErrorLabel{
+  font-size: 0.8rem;
+  color: #ce3c3c;
+}
+
+.UploadModal-SubmitButton{
+  box-sizing: border-box;
+  align-self: flex-end;
+  justify-self: center;
+  border-radius: 0.3rem;
+  border: none;
+  background-color: #dfdfdf;
+  color: #292929;
+  width: 50%;
+  height: 2.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: opacity 0.2s ease;
+}
+
+.UploadModal-SubmitButton:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}

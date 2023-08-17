@@ -1,0 +1,33 @@
+.Error-Container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.Error-Title{
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.Error-Button{
+  box-sizing: border-box;
+  justify-self: center;
+  border-radius: 0.7rem;
+  border: 2px solid var(--dark-color);
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  width: 7rem;
+  height: 2.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  transition: opacity 0.2s ease;
+}
+
+.Error-Button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
