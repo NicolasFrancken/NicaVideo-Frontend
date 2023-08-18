@@ -38,6 +38,7 @@ function Creators() {
 
   useEffect(() => {
     fetch();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleFollowClick = async (followCreatorId) => {
@@ -90,6 +91,9 @@ function Creators() {
     <>
       <Header />
       <div className="Creators-Container">
+        <div className="Creators-Top">
+          <h2 className="Creators-Title">All creators</h2>
+        </div>
         {errorMessage ? (
           <div className="Creators-Error">{errorMessage}</div>
         ) : (

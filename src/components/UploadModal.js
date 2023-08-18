@@ -69,7 +69,7 @@ function UploadModal({ fetch }) {
             className="UploadModal-Input"
           />
           <input
-            placeholder="URL"
+            placeholder='URL (please use YT embed "src" link)'
             onChange={handleUrlInputChange}
             value={urlValue}
             className="UploadModal-Input"

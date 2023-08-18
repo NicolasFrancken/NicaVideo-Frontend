@@ -8,12 +8,28 @@
   padding: 7rem 2rem 2rem 2rem;
 }
 
+.Creators-Top{
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.Creators-Title{
+  margin: 0;
+  align-self: center;
+  justify-self: center;
+  font-size: 2rem;
+}
+
 .Creators-CreatorContainer{
   width: 30rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin: 1rem 0
 }
 
 .Creators-Left{
@@ -26,6 +42,7 @@
   width: 5rem;
   height: 5rem;
   border-radius: 1rem;
+  object-fit: cover;
 }
 
 .Creators-Name {
@@ -62,4 +79,24 @@
   font-size: 1.3rem;
   font-weight: 500;
   margin: 1rem 0 0 0;
+}
+
+@media only screen and (max-width: 550px) {
+  .Creators-Title{
+    font-size: 1rem;
+  }
+  .Creators-CreatorContainer{
+    width: 100%;
+    margin: 0 0 1rem 0;
+  }
+  .Creators-FollowButton{
+    font-size: 0.6rem;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 0.6rem;
+  }
+  .Creators-Name{
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
 }

@@ -60,6 +60,7 @@
 
 .Profile-FrameContainer {
   border-radius: 1rem;
+  border: 2px solid var(--dark-color);
 }
 
 .Profile-VideoTitle{
@@ -120,4 +121,27 @@
   font-size: 1.3rem;
   font-weight: 500;
   margin: 1rem 0 0 0;
+}
+
+@media only screen and (max-width: 550px) {
+  .Profile-Title{
+    font-size: 1rem;
+  }
+  .Profile-SignoutButton {
+    font-size: 0.6rem;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 0.6rem;
+  }
+  .Profile-VideoContainer{
+    margin: 1rem 0;
+  }
+  .Profile-VideoTitle{
+    font-size: 1rem;
+    margin: 0.3rem 0 0 0;
+  }
+  .Profile-VideoButton{
+    font-size: 0.6rem;
+  }
+  
 }

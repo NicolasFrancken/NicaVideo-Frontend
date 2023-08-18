@@ -3,6 +3,7 @@ import "../styles/Home.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuthUser } from "react-auth-kit";
+import { BiLike, BiSolidLike } from "react-icons/bi";
 
 import switchLike from "../libs/switchLike";
 import getCreator from "../libs/getCreator";
@@ -40,6 +41,8 @@ function Home() {
 
   useEffect(() => {
     fetch();
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleLikeClick = async (id_video) => {
@@ -68,11 +71,11 @@ function Home() {
     renderedVideos = videos.map((v) => {
       let likeButton;
       if (typeof myLikedVideos === "undefined") {
-        likeButton = "Like";
+        likeButton = <BiLike />;
       } else if (myLikedVideos.includes(v.id_video)) {
-        likeButton = "Dislike";
+        likeButton = <BiSolidLike />;
       } else {
-        likeButton = "Like";
+        likeButton = <BiLike />;
       }
       return (
         <div key={v.id_video} className="Home-VideoContainer">
@@ -86,16 +89,20 @@ function Home() {
             allowFullScreen
             className="Home-FrameContainer"
           ></iframe>
-          <h3 className="Home-VideoTitle">{v.title}</h3>
-          <label className="Home-VideoDate">
-            Date Uploaded: {v.date.slice(0, 10)}
-          </label>
-          <button
-            onClick={() => handleLikeClick(v.id_video)}
-            className="Home-LikeButton"
-          >
-            {likeButton}
-          </button>
+          <div className="Home-VideoSubContainer">
+            <div className="Home-VideoLeft">
+              <h3 className="Home-VideoTitle">{v.title}</h3>
+              <label className="Home-VideoDate">
+                Date Uploaded: {v.date.slice(0, 10)}
+              </label>
+            </div>
+            <button
+              onClick={() => handleLikeClick(v.id_video)}
+              className="Home-LikeButton"
+            >
+              {likeButton}
+            </button>
+          </div>
         </div>
       );
     });

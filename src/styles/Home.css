@@ -1,6 +1,5 @@
 .Home-Container {
   box-sizing: border-box;
-  width: 100vw;
   padding: 7rem 1rem 2rem 1rem;
   display: flex;
   flex-direction: column;
@@ -59,8 +58,23 @@
   margin: 2rem
 }
 
+.Home-VideoSubContainer{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  padding: 0 0.5rem;
+}
+
+.Home-VideoLeft{
+  display: flex;
+  flex-direction: column;
+}
+
 .Home-FrameContainer{
   border-radius: 1rem;
+  border: 2px solid var(--dark-color);
 }
 
 .Home-VideoTitle {
@@ -74,23 +88,31 @@
 
 .Home-LikeButton {
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   justify-self: center;
   border-radius: 0.7rem;
   border: 2px solid var(--dark-color);
   background-color: var(--light-color);
   color: var(--dark-color);
-  width: 5rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   font-size: 0.8rem;
   font-weight: 500;
   font-family: inherit;
-  margin: 0.5rem 0 0 0;
+  margin: 0;
   transition: opacity 0.2s ease;
 }
 
 .Home-LikeButton:hover {
   cursor: pointer;
   opacity: 0.5;
+}
+
+.Home-LikeButton svg {
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
 .Home-Error{
@@ -114,4 +136,27 @@
   font-size: 1.3rem;
   font-weight: 500;
   margin: 1rem 0 0 0;
+}
+
+@media only screen and (max-width: 550px) {
+  .Home-Title{
+    font-size: 1rem;
+  }
+  .Home-CreatorsButton {
+    font-size: 0.6rem;
+    width: 5rem;
+    height: 2rem;
+    border-radius: 0.6rem;
+  }
+  .Home-VideoContainer{
+    margin: 1rem 0;
+  }
+  .Home-VideoTitle{
+    font-size: 1rem;
+    margin: 0.3rem 0 0 0;
+  }
+  .Home-LikeButton{
+    width: 2rem;
+    height: 2rem;
+  }
 }

@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 
 import Signup from "./pages/Signup";
 import Signin from "./pages/Signin";
@@ -8,11 +8,16 @@ import Video from "./pages/Video";
 import Profile from "./pages/Profile";
 import Error from "./pages/Error";
 import { RequireAuth } from "react-auth-kit";
+import { useEffect } from "react";
 
 function AppRoutes() {
-  if (window.location.pathname === "/") {
-    return <Navigate to="/signup" />;
-  }
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (window.location.pathname === "/") {
+      navigate("/signin");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <Routes>
       <Route path="/signup" element={<Signup />} />

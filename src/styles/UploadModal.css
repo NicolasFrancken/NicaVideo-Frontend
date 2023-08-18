@@ -128,3 +128,16 @@
   cursor: pointer;
   opacity: 0.5;
 }
+
+@media only screen and (max-width: 550px) {
+  .UploadModal-Button{
+    margin: 1rem;
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+    border-radius: 0.8rem;
+  }
+  .UploadModal-Container {
+    width: 90%;
+    padding: 2rem 1rem;
+  }
+}

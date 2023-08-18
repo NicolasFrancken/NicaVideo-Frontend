@@ -54,14 +54,14 @@ function Signin() {
           <input
             value={emailValue}
             onChange={handleEmailChange}
-            placeholder="Email"
+            placeholder="test@test.com (test credentials)"
             className="Sign-Input"
           />
           <input
             value={passwordValue}
             type="password"
             onChange={handlePasswordChange}
-            placeholder="Password"
+            placeholder="123456789 (test credentials)"
             className="Sign-Input"
           />
           {errorMessage !== "" ? (

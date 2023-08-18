@@ -42,3 +42,14 @@
   height: 1.5rem;
   color: #dfdfdf;
 }
+
+@media only screen and (max-width: 550px) {
+  .Header-Title{
+    font-size: 1.5rem;
+  }
+  .Header-Button{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.9rem;
+  }
+}
