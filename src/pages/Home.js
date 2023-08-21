@@ -71,11 +71,26 @@ function Home() {
     renderedVideos = videos.map((v) => {
       let likeButton;
       if (typeof myLikedVideos === "undefined") {
-        likeButton = <BiLike />;
+        likeButton = (
+          <BiLike
+            onClick={() => handleLikeClick(v.id_video)}
+            className="Home-LikeButton"
+          />
+        );
       } else if (myLikedVideos.includes(v.id_video)) {
-        likeButton = <BiSolidLike />;
+        likeButton = (
+          <BiSolidLike
+            onClick={() => handleLikeClick(v.id_video)}
+            className="Home-LikeButton"
+          />
+        );
       } else {
-        likeButton = <BiLike />;
+        likeButton = (
+          <BiLike
+            onClick={() => handleLikeClick(v.id_video)}
+            className="Home-LikeButton"
+          />
+        );
       }
       return (
         <div key={v.id_video} className="Home-VideoContainer">
@@ -96,12 +111,7 @@ function Home() {
                 Date Uploaded: {v.date.slice(0, 10)}
               </label>
             </div>
-            <button
-              onClick={() => handleLikeClick(v.id_video)}
-              className="Home-LikeButton"
-            >
-              {likeButton}
-            </button>
+            {likeButton}
           </div>
         </div>
       );
