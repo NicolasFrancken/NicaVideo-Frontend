@@ -78,8 +78,12 @@
 }
 
 .Home-VideoTitle {
-  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: 1.3rem;
+  margin: 0;
+  max-width: 240px;
+  overflow: hidden;
 }
 
 .Home-VideoDate{
@@ -88,20 +92,14 @@
 
 .Home-LikeButton {
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-self: center;
   border-radius: 0.7rem;
   border: 2px solid var(--dark-color);
   background-color: var(--light-color);
   color: var(--dark-color);
   width: 2rem;
   height: 2rem;
-  padding: 0.5rem;
+  padding: 0.3rem;
   font-size: 0.8rem;
-  font-weight: 500;
-  font-family: inherit;
   margin: 0;
   transition: opacity 0.2s ease;
 }
