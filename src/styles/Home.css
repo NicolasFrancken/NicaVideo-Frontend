@@ -143,7 +143,7 @@
   }
   .Home-CreatorsButton {
     font-size: 0.6rem;
-    width: 5rem;
+    min-width: 5rem;
     height: 2rem;
     border-radius: 0.6rem;
   }
