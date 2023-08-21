@@ -1,6 +1,6 @@
 .Profile-Container {
   box-sizing: border-box;
-  width: 100vw;
+  width: 100%;
   padding: 7rem 1rem 2rem 1rem;
   display: flex;
   flex-direction: column;

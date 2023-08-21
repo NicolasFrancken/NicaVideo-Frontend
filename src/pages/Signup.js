@@ -12,6 +12,7 @@ function Signup() {
   const [passwordValue, setPasswordValue] = useState("");
   const [imageValue, setImageValue] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const signIn = useSignIn();
   const navigate = useNavigate();
@@ -34,11 +35,13 @@ function Signup() {
 
   const handleSignupSubmit = async (event) => {
     event.preventDefault();
+    setIsLoading(true);
 
     const res = await signup(nameValue, emailValue, passwordValue, imageValue);
 
     if (res.message) {
       setErrorMessage(res.message);
+      setIsLoading(false);
       return;
     }
 
@@ -87,7 +90,7 @@ function Signup() {
             ""
           )}
           <button type="submit" className="Sign-SubmitButton">
-            Sign up
+            {isLoading ? <div class="loader"></div> : "Sign up"}
           </button>
         </form>
         <button
