@@ -96,8 +96,9 @@
   border: 2px solid var(--dark-color);
   background-color: var(--light-color);
   color: var(--dark-color);
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
   font-size: 0.8rem;
   font-weight: 500;
   font-family: inherit;
