@@ -10,6 +10,7 @@ function Signin() {
   const [emailValue, setEmailValue] = useState("");
   const [passwordValue, setPasswordValue] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
 
   const signIn = useSignIn();
   const navigate = useNavigate();
@@ -24,11 +25,13 @@ function Signin() {
 
   const handleSigninSubmit = async (event) => {
     event.preventDefault();
+    setIsLoading(true);
 
     const res = await signin(emailValue, passwordValue);
 
     if (res.message) {
       setErrorMessage(res.message);
+      setIsLoading(false);
       return;
     }
 
@@ -70,7 +73,7 @@ function Signin() {
             ""
           )}
           <button type="submit" className="Sign-SubmitButton">
-            Sign in
+            {isLoading ? <div class="loader"></div> : "Sign in"}
           </button>
         </form>
         <button
