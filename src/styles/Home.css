@@ -143,8 +143,9 @@
   }
   .Home-CreatorsButton {
     font-size: 0.6rem;
-    min-width: 5rem;
+    width: 5rem;
     height: 2rem;
+    min-width: fit-content;
     border-radius: 0.6rem;
   }
   .Home-VideoContainer{

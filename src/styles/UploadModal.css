@@ -55,6 +55,7 @@
   height: 2rem;
   background-color: var(--light-color);
   border: 2px solid var(--dark-color);
+  color: var(--dark-color);
   border-radius: 50%;
   font-size: 0.9rem ;
   font-weight: 500;
