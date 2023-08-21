@@ -64,8 +64,12 @@
 }
 
 .Profile-VideoTitle{
-  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: 1.3rem;
+  margin: 0;
+  max-width: 240px;
+  overflow: hidden;
 }
 
 .Profile-VideoDate{
@@ -143,5 +147,4 @@
   .Profile-VideoButton{
     font-size: 0.6rem;
   }
-  
 }

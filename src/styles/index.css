@@ -23,3 +23,10 @@ body {
   align-items: center;
   color: var(--dark-color);
 }
+
+@media only screen and (max-width: 1100px) {
+  *:hover {
+    cursor: auto;
+    opacity: 1; 
+  }
+}
