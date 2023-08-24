@@ -22,6 +22,10 @@ function Home() {
   const fetch = async () => {
     const res = await getVideos();
 
+    if (res.status === 401) {
+      return navigate("/signin");
+    }
+
     if (res.message) {
       setErrorMessage(res.message);
       return;
