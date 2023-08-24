@@ -3,6 +3,7 @@ import "../styles/UploadModal.css";
 import { createPortal } from "react-dom";
 import { useState } from "react";
 import { useAuthUser } from "react-auth-kit";
+import { useNavigate } from "react-router-dom";
 
 import uploadVideo from "../libs/uploadVideo";
 
@@ -13,6 +14,7 @@ function UploadModal({ fetch }) {
   const [errorMessage, setErrorMessage] = useState("");
 
   const auth = useAuthUser();
+  const navigate = useNavigate();
 
   const handleTitleInputChange = (event) => {
     setErrorMessage("");
@@ -44,6 +46,10 @@ function UploadModal({ fetch }) {
     }
 
     const res = await uploadVideo(auth().creatorId, urlValue, titleValue);
+
+    if (res.status === 401) {
+      return navigate("/signin");
+    }
 
     if (res.message) {
       setErrorMessage(res.message);

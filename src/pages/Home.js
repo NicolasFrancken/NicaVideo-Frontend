@@ -35,6 +35,10 @@ function Home() {
 
     const ress = await getCreator(auth().creatorId);
 
+    if (res.status === 401) {
+      return navigate("/signin");
+    }
+
     if (ress.message) {
       setErrorMessage(ress.message);
       return;
@@ -52,7 +56,9 @@ function Home() {
   const handleLikeClick = async (id_video) => {
     const res = await switchLike(id_video, auth().creatorId);
 
-    console.log(res);
+    if (res.status === 401) {
+      return navigate("/signin");
+    }
 
     if (res.message) {
       setErrorMessage(res.message);

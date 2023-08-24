@@ -2,6 +2,7 @@ import "../styles/Creators.css";
 
 import { useEffect, useState } from "react";
 import { useAuthUser } from "react-auth-kit";
+import { useNavigate } from "react-router-dom";
 
 import switchFollow from "../libs/switchFollow";
 import getCreator from "../libs/getCreator";
@@ -15,9 +16,14 @@ function Creators() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const auth = useAuthUser();
+  const navigate = useNavigate();
 
   const fetch = async () => {
     const res = await getCreators(auth().creatorId);
+
+    if (res.status === 401) {
+      return navigate("/signin");
+    }
 
     if (res.message) {
       setErrorMessage(res.message);
@@ -27,6 +33,10 @@ function Creators() {
     setCreators(res.creators);
 
     const ress = await getCreator(auth().creatorId);
+
+    if (res.status === 401) {
+      return navigate("/signin");
+    }
 
     if (ress.message) {
       setErrorMessage(ress.message);
@@ -43,6 +53,10 @@ function Creators() {
 
   const handleFollowClick = async (followCreatorId) => {
     const res = await switchFollow(followCreatorId, auth().creatorId);
+
+    if (res.status === 401) {
+      return navigate("/signin");
+    }
 
     if (res.message) {
       setErrorMessage(res.message);

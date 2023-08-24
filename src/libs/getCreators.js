@@ -11,6 +11,9 @@ async function getCreators(creatorId) {
     );
     return { creators: res.data.result };
   } catch (e) {
+    if (e.response.status === 401) {
+      return { status: 401 };
+    }
     return { message: e.response.data.message };
   }
 }

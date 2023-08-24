@@ -11,6 +11,9 @@ async function getVideo(videoId) {
     );
     return { video: res.data };
   } catch (e) {
+    if (e.response.status === 401) {
+      return { status: 401 };
+    }
     return { message: e.response.data.message };
   }
 }

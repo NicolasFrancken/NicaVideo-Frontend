@@ -21,6 +21,10 @@ function Profile() {
   const fetch = async () => {
     const res = await getCreatorVideos(auth().creatorId);
 
+    if (res.status === 401) {
+      return navigate("/signin");
+    }
+
     if (res.message) {
       setErrorMessage(res.message);
       return;
@@ -36,6 +40,10 @@ function Profile() {
 
   const handlePublishClick = async (id) => {
     const res = await publishSwitch(id);
+
+    if (res.status === 401) {
+      return navigate("/signin");
+    }
 
     if (res.message) {
       setErrorMessage(res.message);

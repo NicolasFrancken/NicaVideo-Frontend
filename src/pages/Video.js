@@ -21,6 +21,10 @@ function Video() {
     const fetch = async () => {
       const res = await getVideo(videoId);
 
+      if (res.status === 401) {
+        return navigate("/signin");
+      }
+
       if (res.message) {
         setErrorMessage(res.message);
         return;
@@ -30,7 +34,8 @@ function Video() {
       setUrlValue(res.video.url);
     };
     fetch();
-  }, [videoId]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleTitleInputChange = (event) => {
     setErrorMessage("");
@@ -52,6 +57,10 @@ function Video() {
 
     const res = await updateVideo(videoId, urlValue, titleValue);
 
+    if (res.status === 401) {
+      return navigate("/signin");
+    }
+
     if (res.message) {
       setErrorMessage(res.message);
       return;
@@ -62,6 +71,10 @@ function Video() {
 
   const handleDeleteClick = async () => {
     const res = await deleteVideo(videoId);
+
+    if (res.status === 401) {
+      return navigate("/signin");
+    }
 
     if (res.message) {
       setErrorMessage(res.message);
