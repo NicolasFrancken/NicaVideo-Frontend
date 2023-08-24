@@ -1,8 +1,8 @@
-import axios from "axios";
+import axiosInstance from "../utils/axiosInstance";
 
 async function switchLike(videoId, creatorId) {
   try {
-    const res = await axios.put(
+    const res = await axiosInstance.put(
       `https://test-vncs.onrender.com/api/videos/like/${creatorId}`,
       { videoId },
       {

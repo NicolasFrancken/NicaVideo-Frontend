@@ -90,7 +90,7 @@ function Signup() {
             ""
           )}
           <button type="submit" className="Sign-SubmitButton">
-            {isLoading ? <div class="loader"></div> : "Sign up"}
+            {isLoading ? <div className="loader"></div> : "Sign up"}
           </button>
         </form>
         <button

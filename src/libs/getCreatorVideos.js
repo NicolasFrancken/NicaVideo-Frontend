@@ -1,8 +1,8 @@
-import axios from "axios";
+import axiosInstance from "../utils/axiosInstance";
 
 async function getCreatorVideos(creatorId) {
   try {
-    const res = await axios.get(
+    const res = await axiosInstance.get(
       `https://test-vncs.onrender.com/api/videos/creator/${creatorId}`,
       {
         headers: { "Content-Type": "application/json" },

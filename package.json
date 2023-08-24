@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "axios": "^1.4.0",
+    "js-cookie": "^3.0.5",
     "react": "^18.2.0",
     "react-auth-kit": "^2.12.6",
     "react-dom": "^18.2.0",

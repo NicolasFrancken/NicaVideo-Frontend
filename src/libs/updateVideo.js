@@ -1,8 +1,8 @@
-import axios from "axios";
+import axiosInstance from "../utils/axiosInstance";
 
 async function updateVideo(videoId, url, title) {
   try {
-    const res = await axios.put(
+    const res = await axiosInstance.put(
       `https://test-vncs.onrender.com/api/videos/creator/${videoId}`,
       { url, title },
       {

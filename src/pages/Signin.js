@@ -73,7 +73,7 @@ function Signin() {
             ""
           )}
           <button type="submit" className="Sign-SubmitButton">
-            {isLoading ? <div class="loader"></div> : "Sign in"}
+            {isLoading ? <div className="loader"></div> : "Sign in"}
           </button>
         </form>
         <button

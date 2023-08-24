@@ -1,8 +1,8 @@
-import axios from "axios";
+import axiosInstance from "../utils/axiosInstance";
 
 async function uploadVideo(creatorId, url, title) {
   try {
-    const res = await axios.post(
+    const res = await axiosInstance.post(
       `https://test-vncs.onrender.com/api/videos/creator/${creatorId}`,
       {
         url,
